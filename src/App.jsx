@@ -10,38 +10,23 @@ import About from './pages/About';
 function App() {
   return (
     <Router>
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className="navbar-brand" to="/">
-            <img src={logo} alt="Logo" className="logo" />
-          </Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">Dashboard</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Chat">Chat</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Feed">Feed</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/About">About</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <Routes>
-          <Route path="/" element={<DashBoard />} />
-          <Route path="/Chat" element={<Chat />} />
-          <Route path="/Feed" element={<Feed />} />
-          <Route path="/About" element={<About />} />
-        </Routes>
-      </div>
+      <nav className="navbar navbar-expand-sm navbar-custom">
+        <Link className="navbar-brand" to="/">
+          <img src={logo} alt="Logo" className="logo" />
+        </Link>
+        <div className="navbar-nav">
+          <Link className="nav-link" to="/">Dashboard</Link>
+          <Link className="nav-link" to="/Chat">Chat</Link>
+          <Link className="nav-link" to="/Feed">Feed</Link>
+          <Link className="nav-link" to="/About">About</Link>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<DashBoard />} />
+        <Route path="/Chat" element={<Chat />} />
+        <Route path="/Feed" element={<Feed />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
     </Router>
   );
 }
