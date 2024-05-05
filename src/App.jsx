@@ -7,6 +7,9 @@ import Chat from './pages/Chat';
 import Feed from './pages/Feed';
 import About from './pages/About';
 import'./componets/AuthContext.jsx';
+import { useAuth } from './componets/AuthContext';
+import './componets/LoginForm.jsx';
+import './componets/SignUpForm.jsx';
 
 function App() {
   return (

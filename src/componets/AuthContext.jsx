@@ -1,14 +1,15 @@
 import React, { createContext, useContext, useState } from 'react';
 
-const AuthContext = createContext(null);
+const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);  // 'user' holds the authentication state
+    const [user, setUser] = useState(null);  // Initialize without a user
 
-    const login = (userData) => {
-        setUser(userData);  // Simulate a login by setting user data
+    const login = (username, password) => {
+        // Simulate a login by setting user data
+        setUser({ name: username });
     };
 
     const logout = () => {
