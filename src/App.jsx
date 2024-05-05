@@ -6,6 +6,7 @@ import DashBoard from './pages/Dashboard';
 import Chat from './pages/Chat';
 import Feed from './pages/Feed';
 import About from './pages/About';
+import'./componets/AuthContext.jsx';
 
 function App() {
   return (
